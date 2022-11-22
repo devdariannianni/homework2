@@ -1,0 +1,9 @@
+<div class="container">
+  <h3
+    *ngFor="let number of numbers"
+    [style.color]="isEven(number) ? 'red' : 'green' ">
+    {{number}} is 
+    {{ isEven(number) ? 'Even number' : 'Odd number'}}
+</h3>
+
+</div>
