@@ -1,0 +1,11 @@
+.container{
+    padding: 15px;
+    width: 150px;
+    color:antiquewhite;
+    display: block;
+    border: 1px solid #111;
+    text-align: center;
+    margin-top: 12%;
+    margin-left: 42%;
+}
+
