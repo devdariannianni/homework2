@@ -1,0 +1,29 @@
+<div class="container">
+    <ng-container *ngFor="let item of product">
+        <div class="cart" >
+            <img [src]="item.image" alt="">
+            <div class="title-box">
+                <a href="">{{item.title}}</a>
+                <p>{{item.description | trancateText : 20}}</p>
+                <!-- <div class="category d-flex align-items-center" >
+                    <span class="bullet" [ngClass]="setClass(item.category)"></span>
+                    <span class="ms-2" >{{item.category}}</span>
+                </div> -->
+            </div>
+            <div class="rating-box">
+                <h4>{{item.price | currency}}</h4>
+                <div class="stars">
+                    <app-rating-stars [maxNum]="5" (starRate)="getRating($event)"></app-rating-stars>
+    
+                </div>
+                <p>{{item.rating.count}} reviews</p>
+                <ng-container [ngSwitch]="item.inStock">
+                    <button *ngSwitchCase="true" > <i class="fa fa-shopping-cart" aria-hidden="true"></i>add to cart</button>
+                    <button *ngSwitchCase="false" class="disabled" > <i class="fa fa-shopping-cart" aria-hidden="true"></i>Sold out</button>
+                </ng-container>
+                
+            </div>
+        </div>
+
+    </ng-container>
+</div>

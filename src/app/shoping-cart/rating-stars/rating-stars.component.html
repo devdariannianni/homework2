@@ -1,0 +1,6 @@
+<span 
+*ngFor="let star of starMaxNum"
+[ngClass]="star <= this.rateNum ? 'checked' : ''"
+>
+    <i (click)="getRateNumber(star)"  class="fa fa-star "></i>
+</span>

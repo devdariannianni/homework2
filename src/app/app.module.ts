@@ -10,6 +10,9 @@ import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { PipesComponent } from './pipes/pipes.component';
+import { ProductComponent } from './shoping-cart/product/product.component';
+import { TrancateStrPipe } from './meta-data/trancate-str.pipe';
+import { RatingStarsComponent } from './shoping-cart/rating-stars/rating-stars.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { PipesComponent } from './pipes/pipes.component';
     Homework1Component,
     CardComponent,
     ChildComponent,
-    PipesComponent
+    PipesComponent,
+    ProductComponent,
+    TrancateStrPipe,
+    RatingStarsComponent
   ],
   imports: [
     BrowserModule,
