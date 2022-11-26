@@ -1,0 +1,17 @@
+.pipes{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+}
+.string-pipes{
+    border:2px solid #444;
+    margin: 7px;
+    padding: 10px;
+    border-radius: 20px;
+}
+.number-pipes{
+    border:2px solid #444;
+    margin: 7px;
+    padding: 10px;
+    border-radius: 20px;
+}

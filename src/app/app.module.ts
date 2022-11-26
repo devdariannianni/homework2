@@ -9,6 +9,7 @@ import { Homework1Component } from './homework1/homework1.component';
 import { CardComponent } from './card/card.component';
 import { FormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
+import { PipesComponent } from './pipes/pipes.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ChildComponent } from './child/child.component';
     FooterComponent,
     Homework1Component,
     CardComponent,
-    ChildComponent
+    ChildComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

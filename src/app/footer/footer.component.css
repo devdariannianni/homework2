@@ -2,7 +2,7 @@
     padding: 30px;
     text-align: center;
     background-color: rgb(97, 97, 97);
-    /* position: fixed; */
+    position: fixed;
     bottom: 0;
     width: 100%;
 }

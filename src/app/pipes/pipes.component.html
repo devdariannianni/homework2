@@ -1,0 +1,31 @@
+<div class="pipes">
+     <div class="string-pipes">
+        <h1>String pipes</h1>
+        <h4>{{title}}</h4>
+        <h4>{{title | uppercase}}</h4>
+        <h4>{{title | lowercase}}</h4>
+        <h4>{{title | titlecase}}</h4>
+        <h4>{{title | slice: 5}}</h4>
+        <h4>{{title | slice: 5 : 12}}</h4>
+    </div>
+    <div class="number-pipes">
+        <h1>Number pipes</h1>
+        <h4>{{numberExample}}</h4>
+        <h4>{{numberExample | number: '3.4-5'}}</h4>
+        <h4>{{numberExample | number: '1.3-4'}}</h4>
+        <h4>{{numberExample | number: '5.3-4'}}</h4>
+        <h4>{{numberExample | number: '0.1-2'}}</h4>
+        <h4>{{numberExample | percent}}</h4>
+        <h4>{{numberExample | currency: 'EUR'}}</h4>
+
+    </div>
+    <div class="number-pipes">
+        <h1>Date pipes</h1>
+        <h4>{{date}}</h4>
+        <h4>{{date |date: 'short'}}</h4>
+        <h4>{{date |date: 'shortTime'}}</h4>
+        <h4>{{date |date: 'mediumTime'}}</h4>
+        <h4>{{date | date: 'longTime'}}</h4>
+
+    </div>
+</div>
