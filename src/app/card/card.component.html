@@ -17,11 +17,11 @@
             <span>Type something:</span>
             <div>
                 <input type="text"  [(ngModel)]="userInputName">
-                <button (click)="setUserName(userInputName)"> Set name</button>
+                <button class="btn btn-primary" (click)="setUserName(userInputName)"> Set name</button>
             </div>
             <div>
                 <span>Is employed: </span>
-                <input type="checkbox"  [(ngModel)]="student.employed">
+                <input  type="checkbox"  [(ngModel)]="student.employed">
             </div>
             <div>
                 <span>Select: </span>
@@ -35,7 +35,7 @@
     
             </div>
           </div>
+          <app-child [companyData]="student.company" (sentDataToParent)="reciveData($event)"></app-child>
         </div>
-        <app-child [companyData]="student.company" (sentDataToParent)="reciveData($event)"></app-child>
 
 </div>
