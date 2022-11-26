@@ -6,17 +6,23 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Homework1Component } from './homework1/homework1.component';
+import { CardComponent } from './card/card.component';
+import { FormsModule } from '@angular/forms';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    Homework1Component
+    Homework1Component,
+    CardComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

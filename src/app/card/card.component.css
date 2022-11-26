@@ -1,0 +1,14 @@
+.card{
+
+    margin: 50px;
+}
+.user-dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid #444;
+    
+}
+.user-action{
+    width: 300px;
+    margin: 50px;
+}

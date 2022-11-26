@@ -1,0 +1,12 @@
+<div class="details-block">
+    <h4>More details:</h4>
+    <div>
+        <span>Company name : {{companyData.name}}</span>
+        <span>pharse: {{companyData.catchPhrase}} </span>
+    </div>
+    <div>
+        <input type="text" [(ngModel)]="newValue">
+        <button class="btn btn-primary" (click)="changeValue()">edit</button>
+
+    </div>
+</div>
