@@ -1,0 +1,71 @@
+<form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+    <div class="container">
+        <h1>Product review</h1>
+        <p>We appriciate you taking the time to review our product!</p>
+        
+        
+        <label for="fullname"> Full  name </label>
+        <input type="text" placeholder="Enter your full name" ngModel name="lastName" id="lastName" #userName="ngModel" required>
+        <span *ngIf="!userName.valid && userName.touched" class="text-danger"> Name is required</span>
+        
+        <label for="email">Email</label>
+        <input type="text" placeholder="Enter your email" ngModel email name="email" #emailAdress="ngModel" id="mail" required >
+        <!-- <span *ngIf="emailAdress.valid && emailAdress.touched" class="text-danger"> Email is required</span> -->
+        <span *ngIf="!emailAdress.valid && emailAdress.touched" class="text-danger"> Email is invalid</span>
+
+
+
+        <label style="margin-bottom: 15px;" for="product-chose">Which product are you reviewing?</label>
+        <select name="product"  style="display: block; margin-bottom: 18px;" >
+            <option selected default >pleace choose</option>
+            <option value="jewelry">satisfied</option>
+            <option value="men">neutral</option>
+            <option value="women">dissatisfied </option>
+        </select>
+
+        <label for="review">Review</label>
+        <input class="review-input" ngModel  name="review" type="text" #review="ngModel"  required minlength="9">
+        <span class="text-danger" *ngIf="review.errors?.['minlength']"> Rewiev must be at least 9 characters long</span>
+        <span *ngIf="!review.valid && review.touched" class="text-danger"> review is required</span>
+        <p>Maximum 500 characters</p>
+
+
+        <label for="text">Please rate product with stars</label>
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="list-inline rating-list" 
+                    *ngFor="let star of stars" style="display: inline-block" >
+                      <li (click)="countStar(star)"
+                          [ngClass]="{'selected': (star <= selectedValue)}">
+                        <i class="fa fa-star"></i>
+                      </li> 
+                </ul>
+            </div>
+          </div>
+        <!-- <p style="margin-left: 40%;">Thanks again for your review!</p> -->
+
+        <button type="submit" class="submitbtn" [disabled]="authForm.invalid" >Submit</button>
+        
+        
+    </div>
+
+
+</form>
+
+<div class="container" *ngIf="onSubmit " style="display: flex;"   >
+    <div class="img-coment"><h2 style="text-align: center;">{{authForm.value.lastName[0]}}</h2></div>
+    <div style="margin-left:20px ;">
+        <h3>{{authForm.value.lastName}}</h3>
+        <div class="stars">
+            <ul class="list-inline rating-list" 
+                    *ngFor="let star of stars" style="display: inline-block" >
+                      <li ngModel="" >
+                        <i  class="fa fa-star"></i>
+                      </li> 
+                </ul>
+        </div>
+        <p >{{authForm.value.review}}</p>  
+    </div>
+   
+
+</div>

@@ -1,0 +1,95 @@
+/* *{
+    display: block;
+} */
+.span{
+    display: block;
+}
+.container {
+    padding: 16px;
+    background-color: white;
+    border: 3px solid #757575;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+}
+h1{
+    color: #20af00;
+}
+label{
+    display: block;
+    font-weight: 700;
+}
+input{
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 5px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+.review-input{
+    height: 100px;
+}
+input:focus{
+    background-color: #ddd;
+    outline: none;
+}
+
+
+.submitbtn {
+    background-color: #20af00;
+    color: white;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.submitbtn:hover {
+    opacity: 1;
+}
+
+.submitbtn.disabled, .submitbtn[disabled], fieldset[disabled] .btn{
+    pointer-events: none;
+}
+
+
+.rating-list li {
+    float: right;
+    color: #ddd;
+    padding: 10px 5px;
+  
+  }
+  
+.rating-list li:hover,.rating-list li:hover ~ li, .rating-list li.selected {
+    color: #ffd700;
+  }
+  
+.rating-list {
+    display: inline-block;
+    list-style: none;
+  }
+
+.img-coment{
+    width: 50px;
+    height: 50px;
+    background-color:#757575;
+    border-radius: 50%;
+}
+
+.hidden{
+    display: block;
+}
+
+/* .container-coment{
+    padding: 16px;
+    background-color: white;
+    border: 3px solid #757575;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 30px;
+    width: 70%;
+    margin-left: 12%;
+    /* display: none; */

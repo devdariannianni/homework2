@@ -13,6 +13,8 @@ import { PipesComponent } from './pipes/pipes.component';
 import { ProductComponent } from './shoping-cart/product/product.component';
 import { TrancateStrPipe } from './meta-data/trancate-str.pipe';
 import { RatingStarsComponent } from './shoping-cart/rating-stars/rating-stars.component';
+import { FormComponent } from './review/form/form.component';
+import { StarsComponent } from './review/stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,15 @@ import { RatingStarsComponent } from './shoping-cart/rating-stars/rating-stars.c
     PipesComponent,
     ProductComponent,
     TrancateStrPipe,
-    RatingStarsComponent
+    RatingStarsComponent,
+    FormComponent,
+    StarsComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
