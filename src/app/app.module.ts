@@ -15,6 +15,7 @@ import { TrancateStrPipe } from './meta-data/trancate-str.pipe';
 import { RatingStarsComponent } from './shoping-cart/rating-stars/rating-stars.component';
 import { FormComponent } from './review/form/form.component';
 import { StarsComponent } from './review/stars/stars.component';
+import {ElementHightliter} from './meta-data/elementBackground.directives'
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { StarsComponent } from './review/stars/stars.component';
     RatingStarsComponent,
     FormComponent,
     StarsComponent,
+    ElementHightliter
     
   ],
   imports: [
