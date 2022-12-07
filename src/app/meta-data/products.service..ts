@@ -1,7 +1,9 @@
 import { Injectable } from "@angular/core";
 import { IProductCard } from "./product.interface";
 
-Injectable ()
+@Injectable ({
+    providedIn: 'root'
+})
 
 export class ProductService{
     constructor(){

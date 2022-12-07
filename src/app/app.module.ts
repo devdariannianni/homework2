@@ -44,7 +44,7 @@ import { TodoListComponent } from './todo-app/todo-list/todo-list.component';
     FormsModule,
     
   ],
-  providers: [ProductService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
