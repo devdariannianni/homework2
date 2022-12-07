@@ -18,7 +18,7 @@ export class TrancateStrPipe implements PipeTransform {
         }
       }
     }
-    console.log(result);
+    // console.log(result);
     
     return result;
   }

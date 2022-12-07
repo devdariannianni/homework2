@@ -16,6 +16,8 @@ import { RatingStarsComponent } from './shoping-cart/rating-stars/rating-stars.c
 import { FormComponent } from './review/form/form.component';
 import { StarsComponent } from './review/stars/stars.component';
 import {ElementHightliter} from './meta-data/elementBackground.directives'
+import { ProductService } from './meta-data/products.service.';
+import { TodoListComponent } from './todo-app/todo-list/todo-list.component';
 
 @NgModule({
   declarations: [
@@ -31,15 +33,18 @@ import {ElementHightliter} from './meta-data/elementBackground.directives'
     RatingStarsComponent,
     FormComponent,
     StarsComponent,
-    ElementHightliter
+    ElementHightliter,
+    TodoListComponent,
+    
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    
   ],
-  providers: [],
+  providers: [ProductService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

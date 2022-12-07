@@ -1,9 +1,11 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ProductService } from 'src/app/meta-data/products.service.';
 
 @Component({
   selector: 'app-rating-stars',
   templateUrl: './rating-stars.component.html',
-  styleUrls: ['./rating-stars.component.css']
+  styleUrls: ['./rating-stars.component.css'],
+  
 })
 export class RatingStarsComponent implements OnInit {
   @Input() maxNum: number = 0;
@@ -11,7 +13,7 @@ export class RatingStarsComponent implements OnInit {
 
   starMaxNum!: number[];
   rateNum!: number;
-  constructor() { }
+  constructor(private _service: ProductService ) { }
 
   ngOnInit(): void {
     this.starMaxNum = []
