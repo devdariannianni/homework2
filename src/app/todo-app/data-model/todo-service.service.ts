@@ -76,5 +76,12 @@ export class TodoService {
     }
     this._todoList.unshift(newTodo)
   }
+
+  removeTodo(id: number){
+   this._todoList = this._todoList.filter(todo => todo.id !== id)
+    console.log(this._todoList);
+    
+  }
+
   }
 

@@ -5,8 +5,8 @@
         </div>
         <div class="card-body">
             <div class="d-flex align-items-center field p-1">
-                <input type="text" name="todo" class="form-control" placeholder="type your todo..." [(ngModel)]="todoText">
-                <button class="btn btn-primary" (click)="addTodo(todoText)">ADD</button>
+                <input type="text" name="todo" class="form-control" placeholder="type your todo..." (keyup.enter)="addTodo(todoText)"  [(ngModel)]="todoText">
+                <button class="btn btn-primary" (click)="addTodo(todoText) ">ADD</button>
             </div>
         </div>
     </div>
@@ -16,11 +16,37 @@
         </div>
         <div class="card-body">
             <ul>
-                <li *ngFor="let todo of todoList" class="d-flex" >
+                <li *ngFor="let todo of activeTodoes" class="d-flex" >
                     <input type="checkbox" name="" [id]="todo.id" [(ngModel)]="todo.completed">
-                    <span class="ms-2">{{todo.title}}</span>
+                    <ng-container [ngSwitch]="todo.editMode">
+                        <input type="text" *ngSwitchCase="true" [(ngModel)]="todo.title" (keyup.enter)="updateTodo(todo)">
+                        <span class="ms-2" *ngSwitchCase="false">{{todo.title}}</span>
+
+                    </ng-container>
+                    <button class="btn"(click)="todo.editMode = !todo.editMode"> 
+                        <i class="fa " [ngClass]="{'fa-pencil' : !todo.editMode, 'fa-close' : todo.editMode }" ></i>
+                    </button>
                 </li>
             </ul>
+            <div *ngIf="!activeTodoes.length">
+                nothing to show
+            </div>
+        </div>
+        <div class="card-body">
+            <ul>
+                <li *ngFor="let todo of completedTodos" class="d-flex completed-todo" [ngClass]="{'completed' : todo.completed}" >
+                    <input type="checkbox" name="" [id]="todo.id" [(ngModel)]="todo.completed">
+                    <span class="ms-2">{{todo.title}}</span>
+                    <button class="btn">
+                        <i class="fa fa-trash-o" (click)="removeItem(todo.id)"></i>
+
+                    </button>
+
+                </li>
+            </ul>
+            <div *ngIf="!completedTodos.length">
+                nothing to show
+            </div>
         </div>
     </div>
 </div>

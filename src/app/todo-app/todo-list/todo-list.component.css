@@ -6,3 +6,25 @@ ul{
     list-style-type: none;
     padding: 0;
 }
+
+li{
+    padding: 5px;
+    background-color: rgb(194, 211, 211);
+    margin-bottom: 5px ;
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.completed{
+    background-color: rgb(142, 210, 142);
+}
+
+
+.input[type-checkbox]{
+    width: 18px;
+    height: 18px;
+}
+.active{
+    background-color: rgb(234, 234, 169);
+}
