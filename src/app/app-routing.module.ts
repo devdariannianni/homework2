@@ -21,31 +21,18 @@ const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full',
   },
- {
-  path: 'register',
-  component: SignupComponent
- },
-  // {
-  //   path: 'products',
-  //   component: ProductComponent,
-    
-  // },
-  // {
-  //   path: 'todo',
-  //   component: TodoListComponent
-  // },
-  // {
-  //   path: 'home',
-  //   redirectTo: ''
-  // },
-  // {
-  //   path: 'homework.1',
-  //   component: Homework1Component
-  // },
+  {
+    path: 'register',
+    component: SignupComponent
+  },
+  {
+    path: 'main',
+    loadChildren: () => import('./main/main.module').then(m => m.MainModule)
+  },
   {
     path: '**',
     component: PagenotFoundComponent
-  }
+  },
 ];
 
 @NgModule({

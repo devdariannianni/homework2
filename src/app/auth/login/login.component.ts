@@ -17,7 +17,8 @@ export class LoginComponent implements OnInit  {
   onSubmit(form: NgForm){
     if(form.valid){
       console.log('form submited', form.value);
-      form.reset()
+      form.reset();
+      this._router.navigate(['/main'])
     }else{
 
       console.log('not valid');
