@@ -1,13 +1,11 @@
-<div class="m-auto w-25 mt-4">
-    <h2>Login form</h2>
-    <div class="loginForm">
+<div class=" form-container">
+  <div class="loginForm">
+      <h2>Login form</h2>
         <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)" class="form">
             <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
                 <input type="text" class="form-control" ngModel name="userName" #userName="ngModel" required >
-                <!-- <div> Dirty: {{ userName.dirty }}</div>
-                <div> touched: {{ userName.touched }}</div>
-                <div> valid: {{ userName.valid }}</div> -->
+                
                 <div *ngIf="!userName.valid && userName.touched">
                   <span class="text-danger">Name is required</span>
                 </div>

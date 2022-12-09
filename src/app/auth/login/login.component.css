@@ -1,15 +1,15 @@
 .loginForm{
     margin-top: 50px;
 }
-h2{
-    text-align: center;
-}
-.form{
-    width: 580px;
-    background-color: rgb(224, 224, 255);
-    padding: 3px;
-    border-radius:3px ;
-}
+
 .link{
     cursor: pointer;
+}
+.form-container{
+    color: rgb(255, 255, 255);
+    width: 500px;
+    background-color: rgb(154, 154, 255);
+    padding: 5px 50px 50px 50px ;
+    margin-top: 70px;
+    margin-left: 30%
 }
