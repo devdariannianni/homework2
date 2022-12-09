@@ -18,30 +18,22 @@ import { StarsComponent } from './review/stars/stars.component';
 import {ElementHightliter} from './meta-data/elementBackground.directives'
 import { ProductService } from './meta-data/products.service.';
 import { TodoListComponent } from './todo-app/todo-list/todo-list.component';
+import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
+import { MainComponent } from './main/main.component';
+import { MainModule } from './main/main.module';
+import { LoginComponent } from './auth/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    Homework1Component,
-    CardComponent,
-    ChildComponent,
-    PipesComponent,
-    ProductComponent,
-    TrancateStrPipe,
-    RatingStarsComponent,
-    FormComponent,
-    StarsComponent,
-    ElementHightliter,
-    TodoListComponent,
-    
-    
+    MainComponent,
+    PagenotFoundComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
+    MainModule,
     
   ],
   providers: [],
