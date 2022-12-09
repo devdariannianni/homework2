@@ -1,1 +1,36 @@
-<p>login works!</p>
+<div class="m-auto w-25 mt-4">
+    <h2>Login form</h2>
+    <div class="loginForm">
+        <form #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" ngModel name="userName" #userName="ngModel" required >
+                <div *ngIf="!userName.valid && userName.touched">
+                  <span class="text-danger">Name is required</span>
+                </div>
+              </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input type="email" class="form-control" ngModel name="email" #emailAdress="ngModel" required>
+            </div>
+            <div *ngIf="!emailAdress.valid && emailAdress.touched">
+              <span class="text-danger">Email is required</span>
+            </div>
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" ngModel name="password" #password="ngModel" required>
+            </div>
+            <div *ngIf="!password.valid && password.touched">
+              <span class="text-danger">Password is required</span>
+            </div>
+            <div class="mb-3">
+                <label for="number" class="form-label">Number</label>
+                <input type="number" class="form-control" ngModel name="phone" #number="ngModel" required >
+              </div>
+              <div *ngIf="!number.valid && number.touched">
+                <span class="text-danger">Number is required</span>
+              </div>
+            <button type="submit" class="btn btn-primary" [disabled]="!authForm.valid" >Submit</button>
+        </form>
+    </div>
+</div>

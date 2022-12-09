@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,6 +11,17 @@ export class LoginComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(form: NgForm){
+    if(form.valid){
+      console.log('form submited', form.value);
+      form.reset()
+    }else{
+
+      console.log('not valid');
+    }
+    
   }
 
 }

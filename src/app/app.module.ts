@@ -34,6 +34,7 @@ import { LoginComponent } from './auth/login/login.component';
     BrowserModule,
     AppRoutingModule,
     MainModule,
+    FormsModule
     
   ],
   providers: [],
