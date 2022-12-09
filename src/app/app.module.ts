@@ -22,6 +22,7 @@ import { PagenotFoundComponent } from './pagenot-found/pagenot-found.component';
 import { MainComponent } from './main/main.component';
 import { MainModule } from './main/main.module';
 import { LoginComponent } from './auth/login/login.component';
+import { SignupComponent } from './auth/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { LoginComponent } from './auth/login/login.component';
     MainComponent,
     PagenotFoundComponent,
     LoginComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,
