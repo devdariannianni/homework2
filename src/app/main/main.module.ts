@@ -13,13 +13,17 @@ import { FormComponent } from '../review/form/form.component';
 import { StarsComponent } from '../review/stars/stars.component';
 import { ElementHightliter } from '../meta-data/elementBackground.directives';
 import { TodoListComponent } from '../todo-app/todo-list/todo-list.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MainRoutingModule } from './main-routing.module';
+import { SurveyFormComponent } from '../survey-form/survey-form.component';
+import { MainComponent } from './main.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 
 @NgModule({
   declarations: [
+    MainComponent,
     HeaderComponent,
     FooterComponent,
     Homework1Component,
@@ -33,27 +37,29 @@ import { MainRoutingModule } from './main-routing.module';
     StarsComponent,
     ElementHightliter,
     TodoListComponent,
+    SurveyFormComponent,
 
   ],
   imports: [
     CommonModule,
     FormsModule,
-    MainRoutingModule
+    MainRoutingModule,
+    ReactiveFormsModule,
   ],
   exports: [
-    HeaderComponent,
-    FooterComponent,
-    Homework1Component,
-    CardComponent,
-    ChildComponent,
-    PipesComponent,
-    ProductComponent,
-    TrancateStrPipe,
-    RatingStarsComponent,
-    FormComponent,
-    StarsComponent,
-    ElementHightliter,
-    TodoListComponent,
+    // HeaderComponent,
+    // FooterComponent,
+    // Homework1Component,
+    // CardComponent,
+    // ChildComponent,
+    // PipesComponent,
+    // ProductComponent,
+    // TrancateStrPipe,
+    // RatingStarsComponent,
+    // FormComponent,
+    // StarsComponent,
+    // ElementHightliter,
+    // TodoListComponent,
   ]
 })
 export class MainModule { }

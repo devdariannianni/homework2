@@ -1,0 +1,60 @@
+<div class="container">
+    <h2>Survey form</h2>
+    <form [formGroup]="surveyForms" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="" class="form-label">First name</label>
+          <input type="text" class="form-control" formControlName="firstName"  >
+          <div class="text-danger" *ngIf="!surveyForms.get('firstName')?.valid && surveyForms.get('firstName')?.touched "> This fild is required</div>
+        </div>
+        <div class="mb-3">
+            <label for="" class="form-label">Last name</label>
+            <input type="text" class="form-control"  formControlName="lastName"  >
+            <div *ngIf="LastNameControl.errors">
+                <div class="text-danger" *ngIf=" LastNameControl.errors?.['minlength'] ">
+                    Last name should be {{LastNameControl.errors?.['minlength'].requiredLength}}.
+                </div>
+                <div class="text-danger" *ngIf="!LastNameControl.errors?.['required'] ">
+                    this filed is required
+                </div>
+
+            </div>
+        </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Email</label>
+            <input type="text" class="form-control"  formControlName="email" >
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Age</label>
+            <input type="text" class="form-control"  formControlName="age" >
+          </div>
+          <div formGroupName="address">
+              <div class="mb-3">
+                <label for="" class="form-label">country</label>
+                <input type="text" class="form-control" formControlName="country"  >
+              </div>
+              <div class="mb-3">
+                <label for="" class="form-label">city</label>
+                <input type="text" class="form-control" formControlName="city"  >
+              </div>
+
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">phone</label>
+            <input type="number" class="form-control" formControlName="phone"  >
+          </div>
+          <div class="mb-3 form-check">
+            <label for="" class="form-label">Gender</label>
+            <select name="" formControlName="gender" >
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">other</option>
+            </select>
+          </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <input type="password" class="form-control" formControlName="pasword"  >
+        </div>
+ 
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>

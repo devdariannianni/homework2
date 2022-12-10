@@ -3,6 +3,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { CardComponent } from "../card/card.component";
 import { Homework1Component } from "../homework1/homework1.component";
 import { ProductComponent } from "../shoping-cart/product/product.component";
+import { SurveyFormComponent } from "../survey-form/survey-form.component";
 import { TodoListComponent } from "../todo-app/todo-list/todo-list.component";
 import { MainComponent } from "./main.component";
 
@@ -14,7 +15,8 @@ const routes: Routes = [
         children: [
             {
                 path:'products',
-                component: ProductComponent
+                component: ProductComponent,
+                pathMatch: 'full'
             },
             {
                 path: 'todo',
@@ -27,6 +29,10 @@ const routes: Routes = [
             {
                 path: 'home',
                 component: CardComponent
+            },
+            {
+                path: 'survey',
+                component: SurveyFormComponent
             }
         ]
     }

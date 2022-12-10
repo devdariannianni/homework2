@@ -40,3 +40,7 @@ ul li a{
 nav ul li a.active{
     background-color: rgb(43, 43, 43);
 }
+.fa-sign-out{
+    color: rgb(255, 255, 255);
+    transform: scalex(-1);
+}

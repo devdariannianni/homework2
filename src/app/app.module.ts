@@ -7,7 +7,7 @@ import { HeaderComponent } from './header/header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Homework1Component } from './homework1/homework1.component';
 import { CardComponent } from './card/card.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ChildComponent } from './child/child.component';
 import { PipesComponent } from './pipes/pipes.component';
 import { ProductComponent } from './shoping-cart/product/product.component';
@@ -27,7 +27,7 @@ import { SignupComponent } from './auth/signup/signup.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
+  
     PagenotFoundComponent,
     LoginComponent,
     SignupComponent,
@@ -35,7 +35,7 @@ import { SignupComponent } from './auth/signup/signup.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MainModule,
+    ReactiveFormsModule,
     FormsModule
     
   ],

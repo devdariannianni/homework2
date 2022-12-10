@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit  {
     if(form.valid){
       console.log('form submited', form.value);
       form.reset();
-      this._router.navigate(['/main'])
+      this._router.navigate(['/main/home'])
     }else{
 
       console.log('not valid');
