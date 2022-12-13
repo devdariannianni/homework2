@@ -8,7 +8,7 @@
             <li><a routerLinkActive="active"  routerLink="./homework">homework 1</a></li>
             <li><a routerLinkActive="active"  routerLink="./survey">survey</a></li>
 
-            <li><a   routerLink="/"> <i class="fa fa-sign-out"></i></a></li>
+            <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a   routerLink="/"> <i class="fa fa-sign-out"></i></a></li>
 
         </ul>
         

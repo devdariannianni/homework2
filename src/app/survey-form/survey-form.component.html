@@ -9,14 +9,13 @@
         <div class="mb-3">
             <label for="" class="form-label">Last name</label>
             <input type="text" class="form-control"  formControlName="lastName"  >
-            <div *ngIf="LastNameControl.errors">
-                <div class="text-danger" *ngIf=" LastNameControl.errors?.['minlength'] ">
-                    Last name should be {{LastNameControl.errors?.['minlength'].requiredLength}}.
-                </div>
-                <div class="text-danger" *ngIf="!LastNameControl.errors?.['required'] ">
-                    this filed is required
-                </div>
-
+              <div *ngIf="surveyForms.invalid && (LastNameControl.touched || LastNameControl.dirty)">
+                <div class="text-danger" *ngIf="LastNameControl.errors?.['minlength']">
+                  Last name should be {{ LastNameControl.errors?.['minlength'].requiredLength }}. 
+               </div>
+               <div class="text-danger" *ngIf="LastNameControl.errors?.['required']">
+                   This field is reqired
+               </div>
             </div>
         </div>
           <div class="mb-3">
@@ -27,6 +26,17 @@
             <label for="" class="form-label">Age</label>
             <input type="text" class="form-control"  formControlName="age" >
           </div>
+          <div *ngIf="surveyForms.invalid && (age.touched || age.dirty)">
+            <div class="text-danger" *ngIf="age.errors?.['required']">
+                This field is required
+            </div>
+            <div class="text-danger" *ngIf="age.errors?.['ageNotFit']">
+                Number does not fit.
+             </div>
+             <div class="text-danger" *ngIf="age.errors?.['typeNotMatch']">
+                Incorrect input type
+             </div>
+            </div>
           <div formGroupName="address">
               <div class="mb-3">
                 <label for="" class="form-label">country</label>
@@ -49,12 +59,13 @@
                 <option value="female">Female</option>
                 <option value="other">other</option>
             </select>
+            <button type="button" class="btn btn-warning" (click)="changeGender()">Cange gender</button>
           </div>
         <div class="mb-3">
           <label for="exampleInputPassword1" class="form-label">Password</label>
           <input type="password" class="form-control" formControlName="pasword"  >
         </div>
- 
-        <button type="submit" class="btn btn-primary">Submit</button>
-      </form>
+        <button type="button" class="btn btn-warning" (click)="setDefaultForm()"> set default</button>
+        <button type="submit" class="btn btn-primary m-2">Submit</button>
+    </form>
 </div>
